@@ -482,6 +482,11 @@ impl Decoder {
                 .to_vec(),
         ))
     }
+
+    /// Returns the number of fountain codes in the sequence
+    pub fn sequence_count(&self) -> usize {
+        self.sequence_count
+    }
 }
 
 /// A part emitted by a fountain [`Encoder`].

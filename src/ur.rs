@@ -327,6 +327,11 @@ impl Decoder {
     pub fn message(&self) -> Result<Option<Vec<u8>>, Error> {
         self.fountain.message().map_err(Error::from)
     }
+
+    /// Returns the number of fountain codes in the sequence
+    pub fn sequence_count(&self) -> usize {
+        self.fountain.sequence_count()
+    }
 }
 
 #[cfg(test)]
